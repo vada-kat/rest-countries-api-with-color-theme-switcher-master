@@ -1,0 +1,33 @@
+.all-countries {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.all-countries > div {
+  width: 300px;
+}
+.all-countries img {
+  width: 100%;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  border-bottom: 2px solid aliceblue;
+}
+main {
+  padding: 20px;
+  background-color: aliceblue;
+}
+.main-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+form {
+  background-color: white;
+  border-radius: 3px;
+  padding: 11px;
+  box-shadow: 0px 0px 4px aliceblue;
+}

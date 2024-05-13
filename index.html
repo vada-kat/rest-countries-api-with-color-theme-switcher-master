@@ -18,12 +18,23 @@
       <div class="main-head">
         <form action="">
           <label for="country"> <ion-icon name="search"></ion-icon> </label>
-          <input type="textv" name="country" id="" />
+          <input
+            type="textv"
+            name="country"
+            id="search-term"
+            placeholder="search for a country"
+          />
         </form>
-        <select name="region" id="region"></select>
+        <select name="region" id="region">
+          <option value="">Select region</option>
+          <option value="Africa">Africa</option>
+          <option value="Asia">Asia</option>
+          <option value="Europe">Europe</option>
+          <option value="Oceania">Oceania</option>
+        </select>
       </div>
-      <div class="all-countries" id="all-countries"></div>
       <div class="single-country" id="single-country"></div>
+      <div class="all-countries" id="all-countries"></div>
     </main>
     <script
       type="module"
