@@ -40,3 +40,33 @@ document.getElementById("region").addEventListener("change", (e) => {
       console.log(err);
     });
 });
+
+
+
+//error handling in assynchronus js-- .then .catch throw,
+//error handling opt2 - try {} catch {}
+
+
+document.getElementById("search").addEventListener("submit", (e)=>{
+  //prevent efault behavior of submitting a form(sendind http get/post request)
+  e.preventDefault()
+  // fetch data for a serached country
+  let searchTerm = document.getElementById("").value;
+  console.log(searchTerm)
+  //fetch data for that country
+  fetch(".data.json")
+     .then(res=>res.json())
+     .then(allcountries ==> {
+       let searchResult = allcountriesDiv.find(country=>country.name.toLowerCase().startsWith(searchTerm.toLowerCase()))
+      if(searchResult){
+        document.getElementById("single-country").innerHTML=`
+        <img src="${searchResult.flags.png}" alt="country flag" style="width: 300px">
+        <h2>${searchResult.name}</h2>
+        <p>Region : ${searchResult.region}</P>
+        `
+      }else{
+        document.getElementById("single-country").innerHTML ="Country matching your search Not Found!"
+      }
+     }
+     )
+})
