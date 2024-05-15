@@ -26,12 +26,12 @@ document.getElementById("region").addEventListener("change", (e) => {
   fetch("./data.json")
     .then((res) => res.json())
     .then((allcountries) => {
-      if ((selectedRegion.length = 0)) {
+      if (selectedRegion.length == 0) {
         //if no region is selected
         renderCountries(allcountries);
       } else {
         let filteredCountries = allcountries.filter(
-          (country) => country.region !== country.region.toLowerCase()
+          (country) => selectedRegion === country.region
         );
         renderCountries(filteredCountries);
       }
